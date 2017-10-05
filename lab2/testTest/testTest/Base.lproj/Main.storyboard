@@ -92,13 +92,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-7S-MHW">
                                                         <rect key="frame" x="0.0" y="80" width="343" height="48"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" text="Make text all caps?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-fb-jAS">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="749" verticalHuggingPriority="750" text="Make text all caps?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-fb-jAS">
                                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="48"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K0b-7A-gU7">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K0b-7A-gU7">
                                                                 <rect key="frame" x="294" y="0.0" width="51" height="48"/>
                                                                 <connections>
                                                                     <action selector="capsSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="YFC-pe-AhZ"/>
@@ -131,7 +131,6 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="AcZ-jx-Lbe" secondAttribute="trailing" constant="5" id="6ak-eg-D17"/>
                                             <constraint firstItem="AcZ-jx-Lbe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4Xk-fn-MhS" secondAttribute="topMargin" constant="200" id="xRU-vz-xLy"/>
                                         </constraints>
                                     </stackView>
