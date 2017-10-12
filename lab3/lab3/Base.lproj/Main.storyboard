@@ -22,46 +22,224 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytF-rx-TcN">
-                                <rect key="frame" x="131.5" y="5" width="112.5" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytF-rx-TcN">
+                                <rect key="frame" x="21" y="35" width="194" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="OuL-ig-p7p"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-1Z-O0V">
-                                <rect key="frame" x="26" y="52" width="323" height="700"/>
+                                <rect key="frame" x="21" y="82" width="338" height="595"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjv-QV-pJy">
-                                        <rect key="frame" x="0.0" y="0.0" width="323" height="700"/>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjv-QV-pJy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0h-kR-Zg1">
-                                                <rect key="frame" x="0.0" y="5" width="323" height="690"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J0h-kR-Zg1">
+                                                <rect key="frame" x="0.0" y="5" width="374.5" height="30"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-NU-IZB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="323" height="690"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class Name" borderStyle="bezel" placeholder="Class Name" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-NU-IZB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="30"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="Lrx-uG-e0H"/>
+                                                            <constraint firstAttribute="height" constant="30" id="TT7-sq-h6Y"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                                     </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grade" borderStyle="bezel" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qe8-Fx-qFB">
+                                                        <rect key="frame" x="196" y="0.0" width="101" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BA-YT-uns">
+                                                        <rect key="frame" x="317" y="0.0" width="57.5" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="addingClass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zt5-YY-kTL"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Ek9-NU-IZB" firstAttribute="leading" secondItem="J0h-kR-Zg1" secondAttribute="leading" id="Kzu-pR-fqG"/>
+                                                    <constraint firstAttribute="height" constant="30" id="NNf-pQ-GyW"/>
+                                                    <constraint firstItem="Ek9-NU-IZB" firstAttribute="top" secondItem="J0h-kR-Zg1" secondAttribute="top" id="S4U-c9-cRw"/>
+                                                    <constraint firstItem="qe8-Fx-qFB" firstAttribute="height" secondItem="Ek9-NU-IZB" secondAttribute="height" id="ngW-Ig-Fbi"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-64-5pI">
+                                                <rect key="frame" x="0.0" y="45" width="376" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class Name" borderStyle="bezel" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdg-19-g74">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="999-hM-zLk"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grade" borderStyle="bezel" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vH7-oV-oqx">
+                                                        <rect key="frame" x="196.5" y="0.0" width="101.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJb-g2-DLZ">
+                                                        <rect key="frame" x="318" y="0.0" width="58" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="addingClass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e88-93-64V"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="4uu-LL-KC1"/>
+                                                    <constraint firstItem="kdg-19-g74" firstAttribute="leading" secondItem="jVn-64-5pI" secondAttribute="leading" id="8d3-Hg-XA1"/>
+                                                    <constraint firstItem="kdg-19-g74" firstAttribute="top" secondItem="jVn-64-5pI" secondAttribute="top" id="bTX-bc-JjZ"/>
+                                                    <constraint firstItem="vH7-oV-oqx" firstAttribute="height" secondItem="kdg-19-g74" secondAttribute="height" id="v1W-YM-noB"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-Ae-rRN">
+                                                <rect key="frame" x="0.0" y="85" width="376" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class Name" borderStyle="bezel" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-el-meX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="f3L-gX-dwe"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grade" borderStyle="bezel" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSk-CN-5F0">
+                                                        <rect key="frame" x="196.5" y="0.0" width="101.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-RH-qbU">
+                                                        <rect key="frame" x="318" y="0.0" width="58" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="addingClass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6yx-3o-AET"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="8en-Pb-GBg"/>
+                                                    <constraint firstItem="o4i-el-meX" firstAttribute="leading" secondItem="7kW-Ae-rRN" secondAttribute="leading" id="SRF-Cg-tY4"/>
+                                                    <constraint firstItem="JSk-CN-5F0" firstAttribute="height" secondItem="o4i-el-meX" secondAttribute="height" id="b2h-Of-X8T"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Vf-uD-pga">
+                                                <rect key="frame" x="0.0" y="125" width="376" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class Name" borderStyle="bezel" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufW-IJ-JvL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="lVu-Lp-sUz"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grade" borderStyle="bezel" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ1-Od-ucB">
+                                                        <rect key="frame" x="196.5" y="0.0" width="101.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-V3-lFk">
+                                                        <rect key="frame" x="318" y="0.0" width="58" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="addingClass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vwK-1o-zSj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ufW-IJ-JvL" firstAttribute="leading" secondItem="7Vf-uD-pga" secondAttribute="leading" id="gVi-FU-yze"/>
+                                                    <constraint firstItem="tJ1-Od-ucB" firstAttribute="height" secondItem="ufW-IJ-JvL" secondAttribute="height" id="inz-T2-StY"/>
+                                                    <constraint firstAttribute="height" constant="30" id="oh7-U2-ety"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lyQ-dX-d8r">
+                                                <rect key="frame" x="0.0" y="165" width="376" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class Name" borderStyle="bezel" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4c-1A-BiH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="zda-gw-ko0"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Grade" borderStyle="bezel" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeC-6Y-hTq">
+                                                        <rect key="frame" x="196.5" y="0.0" width="101.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8I-dH-rD0">
+                                                        <rect key="frame" x="318" y="0.0" width="58" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="addingClass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XxN-Wh-STd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="7et-Q8-5rc"/>
+                                                    <constraint firstItem="t4c-1A-BiH" firstAttribute="leading" secondItem="lyQ-dX-d8r" secondAttribute="leading" id="OFk-tN-jVC"/>
+                                                    <constraint firstItem="aeC-6Y-hTq" firstAttribute="height" secondItem="t4c-1A-BiH" secondAttribute="height" id="XBG-GM-i7T"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1O-cn-3BN">
+                                                <rect key="frame" x="0.0" y="200" width="349.5" height="46"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Get GPA"/>
+                                                <connections>
+                                                    <action selector="updateGPA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfY-mf-Uvr"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="GPA: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-dh-9xV">
+                                                <rect key="frame" x="0.0" y="251" width="375" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="oVx-y6-yqh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="J0h-kR-Zg1" firstAttribute="width" secondItem="cjv-QV-pJy" secondAttribute="width" id="Ch3-yC-QDD"/>
+                                            <constraint firstItem="7kW-Ae-rRN" firstAttribute="leading" secondItem="7Vf-uD-pga" secondAttribute="leading" id="12i-BV-ols"/>
+                                            <constraint firstItem="jVn-64-5pI" firstAttribute="leading" secondItem="7kW-Ae-rRN" secondAttribute="leading" id="1ka-xc-aRZ"/>
+                                            <constraint firstItem="jVn-64-5pI" firstAttribute="centerX" secondItem="cjv-QV-pJy" secondAttribute="centerX" id="7Gp-at-3Cp"/>
+                                            <constraint firstItem="TJ6-dh-9xV" firstAttribute="width" secondItem="cjv-QV-pJy" secondAttribute="width" id="DvJ-Gv-9iz"/>
+                                            <constraint firstItem="C1O-cn-3BN" firstAttribute="leading" secondItem="J0h-kR-Zg1" secondAttribute="leading" id="HUs-AC-J8X"/>
+                                            <constraint firstItem="jVn-64-5pI" firstAttribute="top" secondItem="J0h-kR-Zg1" secondAttribute="bottom" constant="10" id="Lgu-70-JxR"/>
+                                            <constraint firstItem="TJ6-dh-9xV" firstAttribute="top" secondItem="C1O-cn-3BN" secondAttribute="bottom" constant="5" id="OQm-g5-ry4"/>
                                             <constraint firstItem="J0h-kR-Zg1" firstAttribute="top" secondItem="cjv-QV-pJy" secondAttribute="top" constant="5" id="RE8-aB-wxi"/>
-                                            <constraint firstAttribute="trailing" secondItem="J0h-kR-Zg1" secondAttribute="trailing" id="Z3z-1d-Gzo"/>
-                                            <constraint firstItem="J0h-kR-Zg1" firstAttribute="centerY" secondItem="cjv-QV-pJy" secondAttribute="centerY" id="cj8-jV-Ugq"/>
+                                            <constraint firstItem="7Vf-uD-pga" firstAttribute="centerX" secondItem="cjv-QV-pJy" secondAttribute="centerX" id="VI4-5A-oVm"/>
+                                            <constraint firstItem="J0h-kR-Zg1" firstAttribute="trailing" secondItem="cjv-QV-pJy" secondAttribute="trailing" id="Z3z-1d-Gzo"/>
+                                            <constraint firstItem="lyQ-dX-d8r" firstAttribute="centerX" secondItem="cjv-QV-pJy" secondAttribute="centerX" id="aBZ-Qc-Jo1"/>
+                                            <constraint firstItem="7Vf-uD-pga" firstAttribute="top" secondItem="7kW-Ae-rRN" secondAttribute="bottom" constant="10" id="c87-Np-Y7Q"/>
+                                            <constraint firstItem="TJ6-dh-9xV" firstAttribute="centerX" secondItem="cjv-QV-pJy" secondAttribute="centerX" id="chO-vQ-n3U"/>
+                                            <constraint firstItem="C1O-cn-3BN" firstAttribute="trailing" secondItem="J0h-kR-Zg1" secondAttribute="trailing" constant="-25" id="dHK-5o-78e"/>
+                                            <constraint firstItem="7kW-Ae-rRN" firstAttribute="centerX" secondItem="cjv-QV-pJy" secondAttribute="centerX" id="e0I-Wc-Olk"/>
+                                            <constraint firstItem="7kW-Ae-rRN" firstAttribute="top" secondItem="jVn-64-5pI" secondAttribute="bottom" constant="10" id="fwF-ne-4j0"/>
+                                            <constraint firstItem="C1O-cn-3BN" firstAttribute="top" secondItem="lyQ-dX-d8r" secondAttribute="bottom" constant="5" id="fyi-jo-gCr"/>
+                                            <constraint firstItem="J0h-kR-Zg1" firstAttribute="centerX" secondItem="cjv-QV-pJy" secondAttribute="centerX" id="gad-iZ-oLY"/>
                                             <constraint firstItem="J0h-kR-Zg1" firstAttribute="leading" secondItem="cjv-QV-pJy" secondAttribute="leading" id="gwc-mG-o1f"/>
+                                            <constraint firstItem="jVn-64-5pI" firstAttribute="leading" secondItem="J0h-kR-Zg1" secondAttribute="leading" id="o9m-be-W3o"/>
+                                            <constraint firstItem="7Vf-uD-pga" firstAttribute="leading" secondItem="lyQ-dX-d8r" secondAttribute="leading" id="uqg-BQ-lJb"/>
+                                            <constraint firstItem="lyQ-dX-d8r" firstAttribute="top" secondItem="7Vf-uD-pga" secondAttribute="bottom" constant="10" id="yG9-sq-Oja"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -69,23 +247,36 @@
                                     <constraint firstAttribute="bottom" secondItem="cjv-QV-pJy" secondAttribute="bottom" id="0yC-qe-vaL"/>
                                     <constraint firstItem="cjv-QV-pJy" firstAttribute="leading" secondItem="eeW-1Z-O0V" secondAttribute="leading" id="3Ho-C3-bBn"/>
                                     <constraint firstItem="cjv-QV-pJy" firstAttribute="top" secondItem="eeW-1Z-O0V" secondAttribute="top" id="7GO-tR-caq"/>
-                                    <constraint firstAttribute="trailing" secondItem="cjv-QV-pJy" secondAttribute="trailing" id="9W9-1F-wim"/>
-                                    <constraint firstAttribute="height" constant="700" id="JBg-Z9-zS2"/>
-                                    <constraint firstItem="cjv-QV-pJy" firstAttribute="width" secondItem="eeW-1Z-O0V" secondAttribute="width" id="cuL-2S-IPX"/>
-                                    <constraint firstItem="cjv-QV-pJy" firstAttribute="height" secondItem="eeW-1Z-O0V" secondAttribute="height" id="m3O-jp-5OB"/>
+                                    <constraint firstAttribute="trailing" secondItem="cjv-QV-pJy" secondAttribute="trailing" constant="-167" id="mGf-rb-Pqx"/>
+                                    <constraint firstItem="cjv-QV-pJy" firstAttribute="centerY" secondItem="eeW-1Z-O0V" secondAttribute="centerY" id="uv2-jE-SMy"/>
                                 </constraints>
+                                <inset key="scrollIndicatorInsets" minX="3" minY="3" maxX="3" maxY="0.0"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="eeW-1Z-O0V" secondAttribute="trailing" constant="10" id="UKR-Z2-zWj"/>
-                            <constraint firstItem="eeW-1Z-O0V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Z1u-5g-f1Z"/>
+                            <constraint firstItem="cjv-QV-pJy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="3nX-3P-tqt"/>
+                            <constraint firstItem="ytF-rx-TcN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="BWV-N8-5Da"/>
+                            <constraint firstItem="ytF-rx-TcN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Uzh-Pu-pbt"/>
+                            <constraint firstItem="ytF-rx-TcN" firstAttribute="leading" secondItem="cjv-QV-pJy" secondAttribute="leading" id="WZb-aI-sHr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eeW-1Z-O0V" secondAttribute="bottom" constant="-10" id="c7s-5L-vhb"/>
+                            <constraint firstItem="eeW-1Z-O0V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kkZ-LM-dYn"/>
                             <constraint firstItem="eeW-1Z-O0V" firstAttribute="top" secondItem="ytF-rx-TcN" secondAttribute="bottom" constant="5" id="ojU-eh-60Q"/>
-                            <constraint firstItem="ytF-rx-TcN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="5" id="sRf-Vn-NHK"/>
-                            <constraint firstItem="eeW-1Z-O0V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tHO-Yy-G2A"/>
-                            <constraint firstItem="ytF-rx-TcN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xat-OB-lJ6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GPAFetch" destination="C1O-cn-3BN" id="SeD-wD-U12"/>
+                        <outlet property="addClass" destination="8BA-YT-uns" id="cT7-51-YyZ"/>
+                        <outlet property="classNameTemplate" destination="Ek9-NU-IZB" id="ocw-7T-TEh"/>
+                        <outlet property="grade2" destination="vH7-oV-oqx" id="39E-Vg-6B1"/>
+                        <outlet property="grade3" destination="JSk-CN-5F0" id="CPG-A9-Kg1"/>
+                        <outlet property="grade4" destination="tJ1-Od-ucB" id="qHg-b0-mdy"/>
+                        <outlet property="grade5" destination="aeC-6Y-hTq" id="4vV-Zi-A8i"/>
+                        <outlet property="gradeTemplate" destination="qe8-Fx-qFB" id="Lto-Vo-ie1"/>
+                        <outlet property="mainStack" destination="J0h-kR-Zg1" id="kKp-I4-ESN"/>
+                        <outlet property="mainStackHeight" destination="NNf-pQ-GyW" id="BGU-Fw-llf"/>
+                        <outlet property="printZone" destination="TJ6-dh-9xV" id="cNb-bB-JR0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
