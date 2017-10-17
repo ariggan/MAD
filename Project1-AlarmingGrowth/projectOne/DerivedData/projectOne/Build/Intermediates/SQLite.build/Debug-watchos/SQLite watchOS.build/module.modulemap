@@ -1,0 +1,6 @@
+framework module SQLite {
+  umbrella header "SQLite.h"
+
+  export *
+  module * { export * }
+}
