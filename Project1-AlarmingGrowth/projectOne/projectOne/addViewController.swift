@@ -13,6 +13,8 @@ class addViewController: UIViewController, UITextFieldDelegate,UITextViewDelegat
     @IBOutlet weak var plantName: UITextField!
     
     @IBOutlet weak var notes: UITextView!
+    var newPlant = plant()
+    
     override func viewDidLoad() {
         plantName.delegate=self
         notes.delegate=self
@@ -33,12 +35,15 @@ class addViewController: UIViewController, UITextFieldDelegate,UITextViewDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindAddSegue"{
             let sceneNextController = segue.destination as! ViewController
+            
             if plantName.text!.isEmpty == false{
-                sceneNextController.user.plantName=plantName.text
+                newPlant.name = plantName.text!
+                
             }
             if notes.text!.isEmpty == false{
-                sceneNextController.user.notes=notes.text
+                newPlant.notes = plantName.text!
             }
+            sceneNextController.thisPlant = newPlant
             
         }
     }

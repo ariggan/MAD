@@ -21,24 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ei4-Jn-tpO">
-                                <rect key="frame" x="0.0" y="226" width="375" height="215"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarming Growth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3m-lM-Oa0">
-                                <rect key="frame" x="94.5" y="176" width="186" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="41.5" y="234" width="293" height="40.5"/>
+                                <color key="backgroundColor" red="0.188466774463805" green="0.51052461139896366" blue="0.11442713470680059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
+                                <color key="textColor" red="0.96387614684878542" green="1" blue="0.99641880139131522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ei4-Jn-tpO">
+                                <rect key="frame" x="0.0" y="651" width="375" height="16"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20769152116121103" green="0.56260119818652843" blue="0.12609939198560641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="z3m-lM-Oa0" firstAttribute="bottom" secondItem="ei4-Jn-tpO" secondAttribute="top" constant="-20" id="8Re-Ob-PQa"/>
                             <constraint firstItem="z3m-lM-Oa0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hkn-RN-V8I"/>
-                            <constraint firstItem="ei4-Jn-tpO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Mfk-Jx-jjv"/>
                             <constraint firstItem="ei4-Jn-tpO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qbn-rW-h0w"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ei4-Jn-tpO" secondAttribute="bottom" id="RP1-Vk-KGK"/>
+                            <constraint firstItem="z3m-lM-Oa0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-80" id="Z2c-Pt-0XK"/>
                             <constraint firstItem="ei4-Jn-tpO" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="jza-FU-hDL"/>
-                            <constraint firstItem="ei4-Jn-tpO" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="206" id="tKq-un-vIV"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -14,12 +14,14 @@ class ViewController: UIViewController {
     var x=0
     var y=10
     
-    var user=addCellData()
+   
     let myStore = EKEventStore()
+    var thisPlant = plant()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     @IBOutlet weak var addButton: UIButton!
 
@@ -27,21 +29,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
     //functions
     @IBAction func unwindAddSegue(_ segue:UIStoryboardSegue){
         //Pass data from addCellData into the main page
-        var newCell=plantCell()
-        if (user.plantName!.isEmpty == false){
-            newCell.plantName=user.plantName!
-        }
-        if (user.notes!.isEmpty == false){
-            newCell.plantNotes=user.notes!
-        }
+        var newCell=plant()
+        
 //        for item in user.alarmArray {
 //            newCell.alarmArray.append(user.alarm)
 //        }
@@ -87,7 +86,10 @@ class ViewController: UIViewController {
         constructAlarm()
     }
     func constructAlarm(){
-        var thisPlant = plant()
+        scrollView.layer.zPosition=0;
+        segControl.layer.zPosition=1;
+        addButton.layer.zPosition=1;
+        
         if (segControl.selectedSegmentIndex==0){
             thisPlant = rose()
             
@@ -138,7 +140,9 @@ class ViewController: UIViewController {
 //        newlabelcount.text="Reminder number: "
 //        newlabelcount.text= newlabecount.text+String(thisPlant.reminderNum)
         
-        self.scrollView.contentSize=CGSize(width: self.mainView.frame.width, height: self.mainView.frame.height+200)
+        self.scrollView.contentSize=CGSize(width: self.mainView.frame.width, height: (self.mainView.frame.height+200))
+        print("content size is")
+        print (self.scrollView.contentSize)
         
         y=y+160
         x=0

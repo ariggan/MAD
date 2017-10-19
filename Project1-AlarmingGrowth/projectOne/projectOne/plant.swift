@@ -11,18 +11,23 @@ import UIKit
 import EventKit
 
 class plant{
-    var plantName: String{
-        return "Plant"
+    var name = ""
+    var notes = ""
+    
+    public var plantName: String{
+        return name
     }
-    var plantNotes: String{
-        return "No notes"}
+    public var plantNotes: String{
+        return notes}
     
     var myRepeatRule=EKRecurrenceRule(recurrenceWith: .weekly, interval: 1, daysOfTheWeek: [EKRecurrenceDayOfWeek(EKWeekday(rawValue: 1)!)], daysOfTheMonth: nil, monthsOfTheYear: nil, weeksOfTheYear: nil, daysOfTheYear: nil, setPositions: nil, end: nil)
     var reminderNum = 1
     var plantImage: UIImage {
-        return UIImage()}
+        return UIImage(named: "genericPlant")!}
     
 //    func setPlantName(plantNameIs: String) {
-//        plantName=plantNameIs
+//        var plantName: String{
+//            return plantNameIs
+//        }
 //    }
 }
