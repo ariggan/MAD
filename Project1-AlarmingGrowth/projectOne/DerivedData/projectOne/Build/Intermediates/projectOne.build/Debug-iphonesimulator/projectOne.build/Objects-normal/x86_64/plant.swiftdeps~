@@ -1,11 +1,130 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "plant"
 provides-nominal:
+- "C10projectOne5plant"
 provides-member:
+- ["C10projectOne5plant", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "Array"
+- "EKRecurrenceDayOfWeek"
+- "EKRecurrenceRule"
+- "EKWeekday"
+- "String"
+- "StringLiteralType"
+- "UIImage"
+- "plant"
 depends-member:
+- ["Ps9AnyObject", "EKRecurrenceDayOfWeek"]
+- ["Ps9AnyObject", "EKRecurrenceRule"]
+- ["Ps9AnyObject", "EKWeekday"]
+- !private ["Ps9AnyObject", "UIImage"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "notes"]
+- ["Ps9AnyObject", ""]
+- ["Ps7CVarArg", "init"]
+- ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["CSo8EKObject", "init"]
+- ["CSo21EKRecurrenceDayOfWeek", "init"]
+- ["OSC21EKRecurrenceFrequency", "weekly"]
+- ["CSo16EKRecurrenceRule", "init"]
+- ["OSC9EKWeekday", "init"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "weekly"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "weekly"]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["Ps10MirrorPath", "init"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "init"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "weekly"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["CSo7UIImage", "init"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "weekly"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- ["C10projectOne5plant", "EKRecurrenceDayOfWeek"]
+- ["C10projectOne5plant", "EKRecurrenceRule"]
+- ["C10projectOne5plant", "EKWeekday"]
+- ["C10projectOne5plant", "String"]
+- ["C10projectOne5plant", "UIImage"]
+- ["C10projectOne5plant", "deinit"]
+- ["C10projectOne5plant", "init"]
+- ["C10projectOne5plant", "myRepeatRule"]
+- ["C10projectOne5plant", "name"]
+- ["C10projectOne5plant", "notes"]
+- ["C10projectOne5plant", "plantImage"]
+- ["C10projectOne5plant", "plantName"]
+- ["C10projectOne5plant", "plantNotes"]
+- ["C10projectOne5plant", "reminderNum"]
 depends-nominal:
+- "Ps9AnyObject"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "CSo8EKObject"
+- "CSo21EKRecurrenceDayOfWeek"
+- "OSC21EKRecurrenceFrequency"
+- "CSo16EKRecurrenceRule"
+- "OSC9EKWeekday"
+- "Ps9Equatable"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "Ps16RawRepresentable"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "CSo7UIImage"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+- "C10projectOne5plant"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
@@ -27,4 +146,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"
+interface-hash: "ad09dc8f232e2a2046dd7333ab30314f"

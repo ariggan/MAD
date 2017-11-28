@@ -47,19 +47,8 @@
                                     <constraint firstAttribute="trailing" secondItem="udK-dk-ecy" secondAttribute="trailing" id="o8U-Gp-7OD"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-oO-uKZ">
-                                <rect key="frame" x="304" y="612" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7WT-3Y-L1n"/>
-                                    <constraint firstAttribute="width" constant="50" id="eW0-dV-6vL"/>
-                                </constraints>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <segue destination="AOE-Ra-FLk" kind="presentation" identifier="addCellSeg" id="bmC-B1-zCh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwn-pu-oiz" userLabel="addButton">
-                                <rect key="frame" x="31" y="607" width="313" height="30"/>
+                                <rect key="frame" x="31" y="612" width="313" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="yYU-Xd-yXH"/>
@@ -69,38 +58,55 @@
                                     <action selector="addPlant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96b-Yf-xeo"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v6r-Je-Fl7">
-                                <rect key="frame" x="0.0" y="637" width="375" height="31"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YL7-HM-k5b">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="v6r-Je-Fl7">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="31"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="d9c-8q-n6M"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Rose"/>
+                                            <segment title="tulip"/>
+                                            <segment title="Cactus"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-oO-uKZ">
+                                        <rect key="frame" x="295" y="0.0" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="eW0-dV-6vL"/>
+                                        </constraints>
+                                        <state key="normal" title="Custom"/>
+                                        <connections>
+                                            <action selector="unselectSeg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odH-UL-eJM"/>
+                                            <segue destination="AOE-Ra-FLk" kind="presentation" id="P3B-bn-X16"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="d9c-8q-n6M"/>
+                                    <constraint firstAttribute="bottom" secondItem="hvq-oO-uKZ" secondAttribute="bottom" id="PZa-3y-yjQ"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="Rose"/>
-                                    <segment title="tulip"/>
-                                    <segment title="Cactus"/>
-                                </segments>
-                            </segmentedControl>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="NhC-q1-fR8" secondAttribute="trailing" constant="15" id="2J9-Wp-5yb"/>
+                            <constraint firstItem="YL7-HM-k5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2kS-Y4-AwD"/>
                             <constraint firstItem="xv1-67-xXP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8wB-sf-ufu"/>
                             <constraint firstItem="xv1-67-xXP" firstAttribute="bottom" secondItem="NhC-q1-fR8" secondAttribute="top" constant="-5" id="C5X-Zl-fx4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hvq-oO-uKZ" secondAttribute="trailing" constant="5" id="Dce-du-O2E"/>
                             <constraint firstItem="NhC-q1-fR8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Ec0-25-au5"/>
                             <constraint firstItem="xv1-67-xXP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hkv-w8-dlW"/>
                             <constraint firstItem="udK-dk-ecy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Kqe-sN-vzl"/>
-                            <constraint firstItem="v6r-Je-Fl7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Tm5-Tk-ady"/>
                             <constraint firstItem="NhC-q1-fR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Wwa-0p-kka"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hvq-oO-uKZ" secondAttribute="bottom" constant="5" id="Y3m-4u-9K7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v6r-Je-Fl7" secondAttribute="bottom" id="Z5I-EW-j0N"/>
                             <constraint firstItem="Dwn-pu-oiz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBR-3D-Wt2"/>
+                            <constraint firstItem="YL7-HM-k5b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="c6V-XY-gL8"/>
                             <constraint firstItem="Dwn-pu-oiz" firstAttribute="width" secondItem="udK-dk-ecy" secondAttribute="width" id="f0H-Dx-3KR"/>
                             <constraint firstItem="xv1-67-xXP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="hNm-Hy-Wdq"/>
-                            <constraint firstItem="Dwn-pu-oiz" firstAttribute="bottom" secondItem="v6r-Je-Fl7" secondAttribute="top" id="jZu-Vz-0F4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YL7-HM-k5b" secondAttribute="bottom" id="lSe-Ka-dbK"/>
                             <constraint firstItem="udK-dk-ecy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="p9c-RY-sgN"/>
-                            <constraint firstItem="v6r-Je-Fl7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vcp-gy-9pR"/>
+                            <constraint firstItem="Dwn-pu-oiz" firstAttribute="bottom" secondItem="YL7-HM-k5b" secondAttribute="top" constant="5" id="rPB-ic-ANU"/>
                         </constraints>
                     </view>
                     <connections>

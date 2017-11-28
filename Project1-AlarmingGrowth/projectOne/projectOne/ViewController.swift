@@ -13,8 +13,10 @@ import EventKit
 class ViewController: UIViewController {
     var x=0
     var y=10
+    var isCustom = false
     
-   
+    //var newPlant = plant()
+    
     let myStore = EKEventStore()
     var thisPlant = plant()
     
@@ -39,11 +41,10 @@ class ViewController: UIViewController {
     //functions
     @IBAction func unwindAddSegue(_ segue:UIStoryboardSegue){
         //Pass data from addCellData into the main page
-        var newCell=plant()
         
-//        for item in user.alarmArray {
-//            newCell.alarmArray.append(user.alarm)
-//        }
+    }
+    @IBAction func unselectSeg(_ sender: Any) {
+        isCustom = true
     }
 //    override func viewWillAppear(animated: Bool) {
 //        checkCalendarAuthorizationStatus()
@@ -90,18 +91,20 @@ class ViewController: UIViewController {
         segControl.layer.zPosition=1;
         addButton.layer.zPosition=1;
         
-        if (segControl.selectedSegmentIndex==0){
+        if (segControl.selectedSegmentIndex==0 && isCustom == false){
             thisPlant = rose()
             
         }
-        else if(segControl.selectedSegmentIndex==1){
+        else if(segControl.selectedSegmentIndex==1 && isCustom == false){
             thisPlant = tulip()
             
         }
-        else{
+        else if(segControl.selectedSegmentIndex==2 && isCustom == false){
             thisPlant = cactus()
         }
-        //var thisPlant = rose()
+        else{
+            //plant is custom
+        }
         var myCalendar = myStore.defaultCalendarForNewReminders()
         var newReminder=EKReminder(eventStore: myStore)
         newReminder.notes="Do this then that"
@@ -114,13 +117,13 @@ class ViewController: UIViewController {
         
         
         
-        var newCellImage = UIImageView()
+        let newCellImage = UIImageView()
         newCellImage.image=thisPlant.plantImage
         
         newCellImage.frame=CGRect(x:x,y:y,width:100, height:100)
         mainView.addSubview(newCellImage)
         
-        var titleLabel = UILabel()
+        let titleLabel = UILabel()
         titleLabel.text=thisPlant.plantName
         titleLabel.frame=CGRect(x:x , y:y, width:100, height: 30)
         titleLabel.backgroundColor=UIColor(red:1 ,green:1,blue:1,alpha: 0.8)

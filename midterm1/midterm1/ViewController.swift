@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         else{
             gasNeeded = miles/mph
-            if gasNeeded < sliderVal{
+            if gasNeeded < Double(inTankSlider.value){
                 let myAlert = UIAlertController(title: "Oops!", message: "You do not have enough gas to reach your destination! Please change your destination to one closer.", preferredStyle:UIAlertControllerStyle.alert)
                 
                 let cancelThis = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.cancel, handler: nil)

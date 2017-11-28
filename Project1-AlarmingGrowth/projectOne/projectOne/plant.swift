@@ -11,8 +11,8 @@ import UIKit
 import EventKit
 
 class plant{
-    var name = ""
-    var notes = ""
+    var name = "Planty"
+    var notes = "No notes"
     
     public var plantName: String{
         return name

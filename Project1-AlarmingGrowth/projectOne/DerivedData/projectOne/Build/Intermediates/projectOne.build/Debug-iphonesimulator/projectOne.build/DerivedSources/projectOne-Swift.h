@@ -165,6 +165,7 @@ SWIFT_CLASS("_TtC10projectOne14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic) NSInteger x;
 @property (nonatomic) NSInteger y;
+@property (nonatomic) BOOL isCustom;
 @property (nonatomic, readonly, strong) EKEventStore * _Nonnull myStore;
 - (void)viewDidLoad;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified addButton;
@@ -173,6 +174,7 @@ SWIFT_CLASS("_TtC10projectOne14ViewController")
 @property (nonatomic, weak) IBOutlet UIScrollView * _Null_unspecified scrollView;
 - (void)didReceiveMemoryWarning;
 - (IBAction)unwindAddSegue:(UIStoryboardSegue * _Nonnull)segue;
+- (IBAction)unselectSeg:(id _Nonnull)sender;
 - (IBAction)addPlant:(id _Nonnull)sender;
 - (void)constructAlarm;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
