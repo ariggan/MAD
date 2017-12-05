@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab6-Ariel</string>
+    <string name="title">What pet is right for you?</string>
+    <string name="dog">I want a pet that misses me when I am gone and loves to play fetch.</string>
+    <string name="cat">I want a pet that is independent and likes to cuddle on occasion.</string>
+    <string name="fish">I want a low maintenance pet</string>
+    <string name="hamster">I want something soft to pet every now and then that does not have full reign of the house.</string>
+    <string name="petFind">Find my pet match!</string>
+    <string name="animalTitle">It seems a pet match was not found.</string>
+    <string name="LearnMore">Click here to learn more.</string>
+    <string name="contentImg">An image with a ferret, a rabbit, a cat, 2 goldfish, 2 dogs, and a pet bird.</string>
+</resources>
