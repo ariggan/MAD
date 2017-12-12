@@ -42,18 +42,18 @@ public class graphExpenses extends AppCompatActivity {
         double percentSocial = (socialCost/max);
         double percentMisc = (miscCost/max);
 
-        SurfaceView graphSpace = (SurfaceView) findViewById(R.id.graphSpace);
-        Log.d("Error checking", "1");
-        SurfaceHolder myHolder = graphSpace.getHolder();
-        Log.d("Error checking", "2");
-        Canvas drawSpace = myHolder.lockCanvas();
-        Log.d("Error checking", "3");
-        //graphSpace.draw(drawSpace);
-        Log.d("Error checking", "4");
-        Paint barColor = new Paint();
-        barColor.setColor(getResources().getColor(R.color.green));
-        //drawSpace is apparently Null
-        drawSpace.drawRect(100,100,1,1,barColor);
-        myHolder.unlockCanvasAndPost(drawSpace);
+//        SurfaceView graphSpace = (SurfaceView) findViewById(R.id.graphSpace);
+//        Log.d("Error checking", "1");
+//        SurfaceHolder myHolder = graphSpace.getHolder();
+//        Log.d("Error checking", "2");
+//        Canvas drawSpace = myHolder.lockCanvas();
+//        Log.d("Error checking", "3");
+//        //graphSpace.draw(drawSpace);
+//        Log.d("Error checking", "4");
+//        Paint barColor = new Paint();
+//        barColor.setColor(getResources().getColor(R.color.green));
+//        //drawSpace is apparently Null
+//        drawSpace.drawRect(100,100,1,1,barColor);
+//        myHolder.unlockCanvasAndPost(drawSpace);
     }
 }
