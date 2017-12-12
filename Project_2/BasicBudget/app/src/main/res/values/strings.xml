@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BasicBudget</string>
+    <string name="title">Your Basic Budget</string>
+    <string name="income">Income</string>
+    <string name="expense">Expenses</string>
+    <string name="work">Work Income</string>
+    <string name="mics">Misc.</string>
+    <string name="housing">Housing</string>
+    <string name="Grocery">Groceries</string>
+    <string name="social">Going Out</string>
+    <string name="vehicle">Vehicle Costs</string>
+    <string name="entry">Enter dollar amount</string>
+    <string name="calculate">Calculate $</string>
+    <string name="dataButton">Graph Expenses</string>
+</resources>
