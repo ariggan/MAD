@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ariggan.basicbudget.MainActivity">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/title"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/incomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/income"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle" />
+
+    <TextView
+        android:id="@+id/expenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/expense"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/incomeText"
+        app:layout_constraintStart_toEndOf="@+id/workIncomeEntry"
+        app:layout_constraintTop_toTopOf="@+id/incomeText" />
+
+    <TextView
+        android:id="@+id/workIncomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/work"
+        app:layout_constraintStart_toStartOf="@+id/incomeText"
+        app:layout_constraintTop_toBottomOf="@+id/expenseText" />
+
+    <TextView
+        android:id="@+id/miscText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/mics"
+        app:layout_constraintStart_toStartOf="@+id/workIncomeText"
+        app:layout_constraintTop_toBottomOf="@+id/workIncomeText" />
+
+    <TextView
+        android:id="@+id/housingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/housing"
+        app:layout_constraintBottom_toBottomOf="@+id/workIncomeText"
+        app:layout_constraintStart_toStartOf="@+id/expenseText"
+        app:layout_constraintTop_toTopOf="@+id/workIncomeText" />
+
+    <TextView
+        android:id="@+id/vehicleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/vehicle"
+        app:layout_constraintStart_toStartOf="@+id/housingText"
+        app:layout_constraintTop_toBottomOf="@+id/housingText" />
+
+    <TextView
+        android:id="@+id/groceryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Grocery"
+        app:layout_constraintStart_toStartOf="@+id/vehicleText"
+        app:layout_constraintTop_toBottomOf="@+id/vehicleText" />
+
+    <TextView
+        android:id="@+id/socialText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/social"
+        app:layout_constraintStart_toStartOf="@+id/groceryText"
+        app:layout_constraintTop_toBottomOf="@+id/groceryText" />
+
+    <TextView
+        android:id="@+id/miscExpenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/mics"
+        app:layout_constraintStart_toStartOf="@+id/socialText"
+        app:layout_constraintTop_toBottomOf="@+id/socialText" />
+
+    <EditText
+        android:id="@+id/workIncomeEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/workIncomeText"
+        app:layout_constraintStart_toEndOf="@+id/workIncomeText"
+        app:layout_constraintTop_toTopOf="@+id/workIncomeText" />
+
+    <EditText
+        android:id="@+id/miscIncomeEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/miscText"
+        app:layout_constraintEnd_toEndOf="@+id/workIncomeEntry"
+        app:layout_constraintStart_toStartOf="@+id/workIncomeEntry"
+        app:layout_constraintTop_toTopOf="@+id/miscText" />
+
+    <EditText
+        android:id="@+id/carExpenseEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vehicleText"
+        app:layout_constraintTop_toTopOf="@+id/vehicleText" />
+
+    <EditText
+        android:id="@+id/housingExpenseEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/housingText"
+        app:layout_constraintEnd_toEndOf="@+id/carExpenseEntry"
+        app:layout_constraintStart_toStartOf="@+id/groceryExpenseEntry"
+        app:layout_constraintTop_toTopOf="@+id/housingText" />
+
+    <EditText
+        android:id="@+id/groceryExpenseEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/groceryText"
+        app:layout_constraintEnd_toEndOf="@+id/carExpenseEntry"
+        app:layout_constraintStart_toStartOf="@+id/carExpenseEntry"
+        app:layout_constraintTop_toTopOf="@+id/groceryText" />
+
+    <EditText
+        android:id="@+id/socialExpenseEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/socialText"
+        app:layout_constraintEnd_toEndOf="@+id/groceryExpenseEntry"
+        app:layout_constraintStart_toStartOf="@+id/groceryExpenseEntry"
+        app:layout_constraintTop_toTopOf="@+id/socialText" />
+
+    <EditText
+        android:id="@+id/miscExpenseEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/entry"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/miscExpenseText"
+        app:layout_constraintEnd_toEndOf="@+id/socialExpenseEntry"
+        app:layout_constraintStart_toStartOf="@+id/socialExpenseEntry"
+        app:layout_constraintTop_toTopOf="@+id/miscExpenseText" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="@+id/graphButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/graphButton" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/calcButton"
+        app:layout_constraintEnd_toStartOf="@+id/graphButton"
+        app:layout_constraintStart_toEndOf="@+id/calcButton"
+        app:layout_constraintTop_toTopOf="@+id/calcButton" />
+
+    <Button
+        android:id="@+id/graphButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dataButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
