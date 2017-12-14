@@ -210,25 +210,27 @@
         android:id="@+id/calcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/calculate"
-        app:layout_constraintStart_toStartOf="@+id/expenseText"
-        app:layout_constraintTop_toBottomOf="@+id/miscExpenseText" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/graphButton" />
 
     <TextView
         android:id="@+id/resultText"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/calcButton"
+        app:layout_constraintBottom_toTopOf="@+id/graphButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calcButton"
-        app:layout_constraintTop_toTopOf="@+id/calcButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miscExpenseEntry" />
 
     <Button
         android:id="@+id/graphButton"
