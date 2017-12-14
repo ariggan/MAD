@@ -69,6 +69,13 @@ public class graphExpenses extends AppCompatActivity {
         staticLabelsFormatter.setHorizontalLabels(new String[] {"","Housing", "Car", "Social", "Grocery","Misc.",""});
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
+        series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
+            @Override
+            public int get(DataPoint data) {
+                return Color.rgb((int) data.getY()*255/4, (int) Math.abs(data.getY()*255/4), 50);
+            }
+        });
+
 
         series.setSpacing(40);
 
